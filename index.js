@@ -1,9 +1,11 @@
-// Import stylesheets
 import 'styles.css';
+const appDiv = document.getElementById('app');
+
+let Titulo = document.title;
 
 window.addEventListener('blur', () => {
     Titulo = document.title;
-    document.title = "Te amo <3";
+    document.title = "Holi <3";
 })
 
 window.addEventListener('focus', () => {
@@ -11,15 +13,6 @@ window.addEventListener('focus', () => {
 })
 
 let h1 = document.getElementById("Titulo");
-let Boton1 = document.getElementById("B1");
-
-// Boton1.addEventListener('click', function() {
-//     const ContenedorBotones = document.querySelector(".Con");
-//     document.querySelector(".Texto").style.display = "block";
-//     ContenedorBotones.style.display = "none";
-//     DibujarFlor(500, 100, 6, 30, 100, 200);
-//     h1.remove();
-// })
 
 document.getElementById("B12").addEventListener('click', function() {
     const ContenedorBotones = document.querySelector(".Con");
@@ -28,7 +21,6 @@ document.getElementById("B12").addEventListener('click', function() {
     ContenedorBotones.style.display = "none";
     Texto.style.display = "none";
     ContenedorBotones2.style.display = "none";
-    // document.querySelector(".Texto").style.display = "block";
     CrearVarias();
     h1.remove();
 })
@@ -114,6 +106,10 @@ function DibujarFlor(x, y, NumeroPetalos, RadioXPetalo, RadioYPetalo, AltoTrazo)
         ctx.arc(x, y, 10, 0, Math.PI * 2);
         ctx.fillStyle = 'white';
         ctx.fill();
+        ctx.beginPath();
+        ctx.arc(x, y, 10, 0, Math.PI * 2);
+        ctx.fillStyle = 'white';
+        ctx.fill();
       }
       dibujarSiguientePetalo();
 }
@@ -175,3 +171,4 @@ function CrearVarias() {
         DibujarFlorSinTallo(x, y, 8, 30, 80, TamañoFlor);
     }
 }
+
