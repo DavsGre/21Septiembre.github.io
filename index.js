@@ -1,8 +1,6 @@
 // Import stylesheets
 import 'styles.css';
 
-let Titulo = document.title;
-
 window.addEventListener('blur', () => {
     Titulo = document.title;
     document.title = "Te amo <3";
