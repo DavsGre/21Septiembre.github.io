@@ -1,5 +1,4 @@
 import 'styles.css';
-const appDiv = document.getElementById('app');
 
 let Titulo = document.title;
 
